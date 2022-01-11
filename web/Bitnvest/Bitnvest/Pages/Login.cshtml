@@ -1,0 +1,36 @@
+﻿@page
+@model Bitnvest.Pages.LoginModel
+@{
+    Layout = "_LayoutLoginAndRegister";
+    ViewData["Title"] = "Login";
+}
+
+<main class="container">
+    <form method="post" class="col-md-12 col-sm-12">
+        <div class="form-inline login-form col-md-7 col-xs-12">
+            <div class="form-group col-md-1 col-xs-12">
+                <i class="material-icons email-icon">email</i>
+            </div>
+            <div class="form-group col-md-5 col-xs-12">
+                <input type="email" class="form-control input-color" required id="email" asp-for="Login.Email" name="Email" placeholder="Seu email">
+            </div>
+            <div class="form-group col-md-6 col-xs-12">
+                <input type="password" class="form-control input-color" required id="senha" asp-for="Login.Senha" name="Senha" placeholder="Sua senha">
+            </div>
+        </div>
+        <div class="col-md-7 col-xs-12">
+            <div class="col-md-6 col-xs-12">
+                <button type="submit" class="btn orange-btn col-md-8 col-xs-12">Entrar</button>
+            </div>
+        </div>
+    </form>
+    @{
+        if (ViewData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible error-alert" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @Html.Raw(@ViewData["Error"])
+            </div>
+        }
+    }
+</main>

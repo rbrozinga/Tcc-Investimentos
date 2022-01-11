@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitnvest", "Bitnvest\Bitnvest.csproj", "{EBC0B948-8B08-4C58-BD4B-6C64B09C4C87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAcess", "DataAcess", "{F9C95E05-0602-4247-92E9-5CA3E4A78FD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{1A3FC933-3860-4E42-8FE3-708FB568D79B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{AEEDC94A-7975-4477-92E0-7D4FC45DE419}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitnvest.Business", "BLL\Bitnvest.Business\Bitnvest.Business.csproj", "{0CF9CC22-2C18-4340-BEA3-CA4EE6B9A679}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitnvest.DataAcess", "DAO\Bitnvest.DataAcess\Bitnvest.DataAcess.csproj", "{718FE6A5-5793-4A50-8E30-B846729DE8E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitnvest.Model", "BLL\Bitnvest.Model\Bitnvest.Model.csproj", "{FD796AEA-D394-4C7E-99FC-E47334E23E97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBC0B948-8B08-4C58-BD4B-6C64B09C4C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC0B948-8B08-4C58-BD4B-6C64B09C4C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC0B948-8B08-4C58-BD4B-6C64B09C4C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC0B948-8B08-4C58-BD4B-6C64B09C4C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF9CC22-2C18-4340-BEA3-CA4EE6B9A679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF9CC22-2C18-4340-BEA3-CA4EE6B9A679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF9CC22-2C18-4340-BEA3-CA4EE6B9A679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF9CC22-2C18-4340-BEA3-CA4EE6B9A679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718FE6A5-5793-4A50-8E30-B846729DE8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718FE6A5-5793-4A50-8E30-B846729DE8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718FE6A5-5793-4A50-8E30-B846729DE8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718FE6A5-5793-4A50-8E30-B846729DE8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD796AEA-D394-4C7E-99FC-E47334E23E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD796AEA-D394-4C7E-99FC-E47334E23E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD796AEA-D394-4C7E-99FC-E47334E23E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD796AEA-D394-4C7E-99FC-E47334E23E97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBC0B948-8B08-4C58-BD4B-6C64B09C4C87} = {AEEDC94A-7975-4477-92E0-7D4FC45DE419}
+		{0CF9CC22-2C18-4340-BEA3-CA4EE6B9A679} = {1A3FC933-3860-4E42-8FE3-708FB568D79B}
+		{718FE6A5-5793-4A50-8E30-B846729DE8E2} = {F9C95E05-0602-4247-92E9-5CA3E4A78FD1}
+		{FD796AEA-D394-4C7E-99FC-E47334E23E97} = {1A3FC933-3860-4E42-8FE3-708FB568D79B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AD86767-BA5B-4EC3-98E1-B08202E7173C}
+	EndGlobalSection
+EndGlobal

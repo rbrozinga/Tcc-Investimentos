@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/datapicker/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/themes/base/all.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body class="background-trade">
+    <nav class="navbar navbar-inverse navbar-color navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-page="/Index" class="navbar-brand"><img class="navbar-logo" src="~/images/bitcoin-logo.png" alt="Logo Bitcoin" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav menu">
+                    <li>
+                        <a>
+                            <span class="material-icons down-icon">
+                                fast_forward
+                            </span> Conheça
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="material-icons down-icon">
+                                fast_forward
+                            </span> Invista
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="material-icons down-icon">
+                                fast_forward
+                            </span> Ferramentas
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="material-icons down-icon">
+                                fast_forward
+                            </span> Aprenda
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="orange-btn" asp-page="/Cadastro">Cadastre-se</a></li>
+                    <li><a class="orange-btn" asp-page="/Login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery-1.10.2.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/bootstrap-datepicker.min.js"></script>
+        <script src="~/lib/jquery.mask.min.js"></script>
+        <script src="~/js/cadastro.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/lib/jquery-1.10.2.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/lib/bootstrap-datepicker.min.js"></script>
+        <script src="~/lib/jquery.mask.min.js"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
+    @RenderSection("Cadastro", required: false)
+</body>
+</html>

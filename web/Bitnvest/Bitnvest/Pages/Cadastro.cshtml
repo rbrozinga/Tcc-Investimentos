@@ -1,0 +1,75 @@
+@page
+@model Bitnvest.Pages.CadastroModel
+@{
+    Layout = "_LayoutLoginAndRegister";
+    ViewData["Title"] = "Cadastro";
+}
+
+<main class="container">
+    <h1>
+        Olá! Seja bem-vindo!
+    </h1>
+    <h2>
+        Para abrir uma conta gratís e começar a investir com segurança, precisamos saber mais de você. Vamos começar?
+    </h2>
+
+    <form method="post" id="cadastro" class="row">
+        <section class="col-md-10">
+            <div class="form-group col-md-12 margin-top-20">
+                <input type="text" required class="form-control input-transparent " name="nome" asp-for="@Model.CadastroDTO.Nome" id="nome" placeholder="Seu nome completo é">
+            </div>
+            <div class="form-group col-md-12">
+                <input type="email" required class="form-control input-transparent" name="email" asp-for="@Model.CadastroDTO.Email" id="email" placeholder="Seu email pessoal é">
+            </div>
+            <div class="form-group col-md-12">
+                <input type="email" required class="form-control input-transparent" name="emailConfirm" asp-for="@Model.CadastroDTO.EmailConfirm" id="emailConfirm" placeholder="Confirme o seu email">
+            </div>
+            <div class="form-group col-md-12">
+                <input type="text" required class="form-control input-transparent" name="cpf" asp-for="@Model.CadastroDTO.CPF" id="cpf" placeholder="Numero do seu CPF">
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="datetime" data-provide="datepicker" required class="form-control input-transparent" asp-for="@Model.CadastroDTO.DataNascimento" name="dataNascimento" id="dataNascimento" placeholder="Data de nascimento">
+                <i class="material-icons lateral-icon">date_range</i>
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="text" required class="form-control input-transparent" name="cel" asp-for="@Model.CadastroDTO.Cel" id="cel" placeholder="Seu cel pessoal">
+                <i class="material-icons lateral-icon">smartphone</i>
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="password" required class="form-control input-transparent" name="senha" asp-for="@Model.CadastroDTO.Senha" id="senha" placeholder="Escreva uma senha">
+            </div>
+
+            <div class="form-group col-md-6">
+                <input type="password" required class="form-control input-transparent" name="senhaConfirm" asp-for="@Model.CadastroDTO.SenhaConfirm" id="senhaConfirm" placeholder="Confirme a sua senha">
+            </div>
+
+            <div class="form-group row">
+                <button type="submit" class="btn orange-btn  margin-top-20 col-md-3 col-xs-12" asp-page-handler="Cadastro">Cadastrar</button>
+            </div>
+        </section>
+    </form>
+
+    <div id="alert-container" class="alert alert-danger alert-dismissible error-alert" role="alert">
+        <div>
+            <strong>Erro!</strong>
+        </div>
+        <span id="alert-body"></span>
+    </div>
+</main>
+
+@{
+    if (ViewData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible error-alert" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            @Html.Raw(@ViewData["Error"])
+        </div>
+    }
+}
+
+@section Cadastro {
+    <script src="~/js/cadastro.js" asp-append-version="true"></script>
+}

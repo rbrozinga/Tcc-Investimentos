@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PimMobile</string>
+    <string name="EmailLogin">Digite o email</string>
+    <string name="padraoSenha">Senha</string>
+    <string name="padraoLogin">LOGIN</string>
+    <string name="padraoCadastro">CADASTRAR</string>
+    <string name="NameCadastro">Digite o nome Completo</string>
+    <string name="ConfirmarSenhaCadastro">Confirme a senha</string>
+    <string name="SenhaCadastro">Digite a senha</string>
+    <string name="EmailCadastro">Digite o e-mail</string>
+    <string name="TelefoneCadastro">Informe o celular</string>
+    <string name="CpfPadrao">Informe o CPF</string>
+    <string name="EnviaCadastro">Enviar</string>
+</resources>

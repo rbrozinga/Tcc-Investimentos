@@ -1,0 +1,13 @@
+{
+  "ConnectionStrings": {
+    "Sql": "Data Source=localhost,1433;Initial Catalog=Bitnvest;User ID=sa;Password=Senha123"
+  },
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ]
+}
